@@ -8,7 +8,13 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    if (
+      str.split("").reverse().join("").toLowerCase().replace(/ /g, "") ===
+      str.replace(/ /g, '').toLowerCase()
+    ) {
+      return true;
+    }
+    return false;
 }
 
 const tests = [
